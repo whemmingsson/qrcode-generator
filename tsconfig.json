@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "CommonJS",
     "noImplicitAny": true,
     "outDir": "./build",
     "preserveConstEnums": true,
