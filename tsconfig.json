@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "module": "none",
+    "module": "ESNext",
     "noImplicitAny": true,
-    "outFile": "./build/build.js",
+    "outDir": "./build",
     "preserveConstEnums": true,
     "removeComments": true,
     "rootDir": "./sketch/",
