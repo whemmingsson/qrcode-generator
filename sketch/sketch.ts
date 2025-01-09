@@ -1,15 +1,20 @@
+import TestDriver from "./core/TestDriver.js";
 
-function setup() {
-  console.log("🚀 - Setup initialized - P5 is running");
-  createCanvas(windowWidth, windowHeight)
-}
+let test = new TestDriver();
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+new p5(function (p: p5) {
 
-function draw() {
-  background(0);
-  fill(255)
-  rect(100, 100, 100, 100);
-}
+  p.setup = function () {
+    p.createCanvas(window.innerWidth, window.innerHeight);
+    test.run();
+  };
+
+  p.windowResized = function () {
+    p.resizeCanvas(window.innerWidth, window.innerHeight);
+  }
+
+  p.draw = function () {
+    p.background(0);
+  };
+
+});

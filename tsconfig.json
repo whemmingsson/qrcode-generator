@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
+    "module": "ESNext",
     "noImplicitAny": true,
     "outDir": "./build",
     "preserveConstEnums": true,
     "removeComments": true,
     "rootDir": "./sketch/",
     "sourceMap": true,
-    "target": "es5",
-    "moduleResolution": "node"
+    "target": "ES6",
+    "moduleResolution": "node",
   }
 }
