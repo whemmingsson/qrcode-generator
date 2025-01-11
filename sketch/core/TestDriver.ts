@@ -3,6 +3,8 @@ import ErrorCorrectionLevel from "./ErrorCorrectionLevel.js";
 import ModeIndicators from "./ModeIndicators.js";
 import getCharacterCountIndicator from "./CharacterCountIndicator.js";
 import BitString from "./BitString.js";
+import encodeNumeric from "./Encoders/NumericEncoder.js";
+import enocodeAlphaNumeric from "./Encoders/AlphanumericEncoder.js";
 
 class TestDriver {
     run() {
@@ -19,6 +21,15 @@ class TestDriver {
         paddedMode.pad(4);
 
         console.log("Complete bit string:", paddedMode + " " + indicator);
+
+        // Encoding numeric
+        let number = "8675309";
+        let encoded = encodeNumeric(number);
+        console.log(`Encoded ${number} to ${encoded}`);
+
+        // Encoding alphanumeric
+        let alphanumeric = "HELLO WORLD";
+        let encodedAlpha = enocodeAlphaNumeric(alphanumeric);
 
         console.log("TestDriver run complete");
     }
